@@ -1,0 +1,11 @@
+public class Squirtle extends Pokemon {
+    public Squirtle(String name, int hp, int attack, int defense, String type) {
+        super(name, hp, attack, defense, type);
+    }
+
+    @Override
+    public void attack(Pokemon target) {
+        System.out.println(this.getName() + " uses Tackle on " + target.getName() + "!");
+        target.takeDamage(this.getAttack());
+    }
+}
